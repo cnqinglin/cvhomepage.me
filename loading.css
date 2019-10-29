@@ -1,0 +1,53 @@
+.site-Welcome{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #888888;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.site-Welcome.active{
+  display: flex;
+}
+.loading{
+    width:200px;  
+    height: 200px;
+    position:relative;
+  }
+  .loading::before , .loading::after{
+    content:'';
+    width: 10px;
+    height: 10px;
+    border:1px solid grey;
+    border-radius:50%;
+    background:black;
+    position:absolute;
+    left:0px ;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    margin: auto;
+    animation-name:spin;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:liner;
+  }
+  .loading::after{
+    animation-delay:1s;
+  }
+  @keyframes spin{
+    0%{
+      width:0;
+      height:0px; 
+      opacity:1;
+    }
+   100%{
+      width:100px;
+      height:100px;
+     opacity:0;
+    }
+  }
